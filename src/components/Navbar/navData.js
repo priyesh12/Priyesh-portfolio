@@ -29,7 +29,7 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Github',
-    url: 'https://github.com/priyeshgupta14',
+    url: 'https://github.com/priyesh12',
     icon: 'github',
   },
   {
