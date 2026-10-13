@@ -134,11 +134,10 @@ body {
   overflow-x: clip;
 }
 
-/* grid/flex children may shrink below their content width, so one long word can't widen the page.
+/* grid children may shrink below their content width, so one long word can't widen the page.
    In the base layer so utilities like min-w-* still win. */
 @layer base {
-  .grid > *,
-  .flex > * {
+  .grid > * {
     min-width: 0;
   }
   :focus-visible {

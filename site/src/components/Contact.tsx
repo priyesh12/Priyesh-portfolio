@@ -167,18 +167,18 @@ export function Contact() {
         </div>
 
         <Reveal>
-          <div className="mt-16 flex flex-col gap-6 border-t border-line pt-10 md:flex-row md:items-end md:justify-between">
+          <div className="mt-16 flex flex-col gap-8 border-t border-line pt-10">
             <button
               onClick={() => {
                 navigator.clipboard?.writeText(profile.email);
                 setCopied(true);
                 setTimeout(() => setCopied(false), 1800);
               }}
-              className="group text-left"
+              className="group max-w-full self-start text-left"
               aria-label="Copy email address"
             >
               <div className="mono-label mb-2">{copied ? '✓ copied' : 'click to copy'}</div>
-              <div className="text-[clamp(1.6rem,4.5vw,3.6rem)] font-medium leading-none tracking-[-0.04em] transition-colors group-hover:text-acct">
+              <div className="break-all text-[clamp(1.6rem,6vw,4.4rem)] font-medium leading-[1.05] tracking-[-0.04em] transition-colors group-hover:text-acct sm:break-normal">
                 {profile.email}
               </div>
             </button>

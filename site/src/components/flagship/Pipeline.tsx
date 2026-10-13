@@ -31,7 +31,7 @@ export function Pipeline({ compact = false }: { compact?: boolean }) {
         </div>
 
         {/* desktop: horizontal flow */}
-        <div className="relative hidden lg:block">
+        <div className="relative hidden xl:block">
           <div className="grid grid-cols-8 gap-3">
             {nodes.map((n, i) => (
               <motion.button
@@ -46,7 +46,10 @@ export function Pipeline({ compact = false }: { compact?: boolean }) {
                 }`}
               >
                 <span className="font-mono text-[10px] text-dim">{String(i).padStart(2, '0')}</span>
-                <span className="text-[13px] font-medium leading-tight">{n.label}</span>
+                <span className="break-words text-[13px] font-medium leading-tight">
+                  {n.label.split(' ×')[0]}
+                  {n.label.includes(' ×') && <span className="block font-mono text-[10px] font-normal text-mute">×{n.label.split(' ×')[1]} datasets</span>}
+                </span>
               </motion.button>
             ))}
           </div>
@@ -92,7 +95,7 @@ export function Pipeline({ compact = false }: { compact?: boolean }) {
         </div>
 
         {/* mobile: vertical flow */}
-        <ol className="relative space-y-2 lg:hidden">
+        <ol className="relative space-y-2 xl:hidden">
           <span className="absolute bottom-4 left-[15px] top-4 w-px bg-line2" aria-hidden />
           {nodes.map((n, i) => (
             <li key={n.id}>

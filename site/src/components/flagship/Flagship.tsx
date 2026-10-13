@@ -115,8 +115,8 @@ export function Flagship() {
         <div className="mt-8 grid items-end gap-8 md:grid-cols-12">
           <div className="md:col-span-8">
             <Reveal>
-              <h2 className="text-[clamp(3.2rem,11vw,10rem)] font-medium leading-[0.86] tracking-[-0.06em]">
-                Alpha<span className="font-serif font-normal italic tracking-[-0.03em] text-acct">Calendar</span>
+              <h2 className="text-[clamp(3.2rem,9.4vw,8.6rem)] font-medium leading-[0.86] tracking-[-0.06em]">
+                Alpha<span className="pr-[0.08em] font-serif font-normal italic tracking-[-0.03em] text-acct">Calendar</span>
               </h2>
             </Reveal>
           </div>
@@ -158,8 +158,8 @@ export function Flagship() {
         </div>
 
         {/* architecture */}
-        <div className="mt-28 grid gap-10 md:mt-36 md:grid-cols-12">
-          <div className="md:col-span-4">
+        <div className="mt-28 grid gap-10 md:mt-36">
+          <div className="max-w-2xl">
             <Reveal>
               <div className="mono-label mb-4">architecture</div>
               <h3 className="text-[clamp(1.8rem,3.2vw,2.8rem)] font-medium leading-[1.02] tracking-[-0.03em]">
@@ -171,7 +171,7 @@ export function Flagship() {
               </p>
             </Reveal>
           </div>
-          <div className="md:col-span-8">
+          <div>
             <Reveal delay={0.1}>
               <Pipeline />
             </Reveal>

@@ -74,7 +74,7 @@ export default function AlphaCalendarCase() {
           </Link>
           <div className="mono-label mt-10">case study · founder & sole engineer · 2025 → now</div>
           <h1 className="mt-6 text-[clamp(3rem,10vw,9rem)] font-medium leading-[0.86] tracking-[-0.06em]">
-            Alpha<span className="font-serif font-normal italic tracking-[-0.03em] text-acct">Calendar</span>
+            Alpha<span className="pr-[0.08em] font-serif font-normal italic tracking-[-0.03em] text-acct">Calendar</span>
           </h1>
           <p className="mt-8 max-w-2xl text-[clamp(1.1rem,1.8vw,1.4rem)] leading-relaxed text-mute text-pretty">{alpha.oneLiner}</p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -132,18 +132,6 @@ export default function AlphaCalendarCase() {
                 </section>
               </Reveal>
             ))}
-            <section id="architecture" className="scroll-mt-28">
-              <div className="font-mono text-[12px] text-acct">06</div>
-              <h2 className="mb-8 mt-3 text-[clamp(1.8rem,3.4vw,2.8rem)] font-medium leading-[1.05] tracking-[-0.03em]">Architecture</h2>
-              <Pipeline />
-              <ul className="mt-8 flex flex-wrap gap-2">
-                {alpha.stack.map(s => (
-                  <li key={s} className="rounded-md border border-line px-2.5 py-1 font-mono text-[11px] text-mute">
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </section>
             <div className="rounded-2xl border border-line bg-panel/60 p-8">
               <p className="text-[clamp(1.2rem,2vw,1.6rem)] leading-snug tracking-tight">
                 1,039 commits and 381 merged PRs in seven weeks, about 285k lines of Python and TypeScript, and ~3,300 tests,
@@ -158,6 +146,18 @@ export default function AlphaCalendarCase() {
             </div>
           </article>
         </div>
+        <section id="architecture" className="mx-auto mt-24 max-w-[1400px] scroll-mt-28 px-5 md:px-10">
+              <div className="font-mono text-[12px] text-acct">06</div>
+              <h2 className="mb-8 mt-3 text-[clamp(1.8rem,3.4vw,2.8rem)] font-medium leading-[1.05] tracking-[-0.03em]">Architecture</h2>
+              <Pipeline />
+              <ul className="mt-8 flex flex-wrap gap-2">
+                {alpha.stack.map(s => (
+                  <li key={s} className="rounded-md border border-line px-2.5 py-1 font-mono text-[11px] text-mute">
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </section>
         <div className="h-32" />
       </main>
       <Footer />
